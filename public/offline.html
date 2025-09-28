@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline</title>
+  <style>
+    .offline-splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff; /* Or your brand color */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .offline-splash-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .offline-splash-logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .offline-splash-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+<div id="offline-splash" class="offline-splash-screen">
+  <div class="offline-splash-content">
+    <img id="offline-splash-logo" class="offline-splash-logo" src="/splashLogo.png" alt="App Logo">
+    <h1 id="offline-splash-title" class="offline-splash-title">سامانه اطلاع رسانی کاشف</h1>
+    <h3 id="offline-splash-text">شما آفلاین هستید</h3>
+  </div>
+</div>
+<script>
+  const mode = localStorage.getItem('layoutMode')=== 'dark' ? 'dark' : 'light';
+
+  const splash = document.getElementById('offline-splash');
+  const logo = document.getElementById('offline-splash-logo');
+  const title = document.getElementById('offline-splash-title');
+  const text = document.getElementById('offline-splash-text');
+
+  if (mode === 'dark') {
+    splash.style.backgroundColor = '#000000';
+    title.style.color = '#ffffff';
+    text.style.color = '#ffffff';
+    logo.src = '/splashLogo.png';
+  } else {
+    splash.style.backgroundColor = '#ffffff';
+    title.style.color = '#000000';
+    text.style.color = '#000000';
+    logo.src = '/logo192.png';
+  }
+
+  window.addEventListener('online', () => {
+    window.location.href = '/';
+  });
+  if (navigator.onLine) {
+    window.location.href = '/';
+  }
+</script>
+</body>
+</html>

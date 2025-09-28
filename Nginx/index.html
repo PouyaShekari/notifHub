@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SATA Microservices Documentation</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #fff;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 950px;
+            padding: 40px;
+        }
+
+        .service {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .service h2 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .service p {
+            margin-top: 20px;
+        }
+
+        .service a {
+            color: #fff;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>SATA Microservices Documentation</h1>
+    <div class="service">
+        <h2>User</h2>
+        <p><a href="http://10.17.53.71/api/user/v1/docs">SwaggerUI</a></p>
+        <h3>Description</h3>
+        <p>All related stuffs around token generation, token parsing, access control management and
+            access control entities such as role, permission and group.</p>
+        <table>
+            <caption>Stack Technology</caption>
+            <tr>
+                <th scope="col">StackLevel</th>
+                <th scope="col">Technology/Type</th>
+            </tr>
+            <tr>
+                <td>Programming Language</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>REST Framework</td>
+                <td>FastAPI</td>
+            </tr>
+            <tr>
+                <td>Documentation</td>
+                <td>OpenAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>Postgres</td>
+            </tr>
+            <tr>
+                <td>ORM</td>
+                <td>SQLAlchemy</td>
+            </tr>
+            <tr>
+                <td>Endpoints</td>
+                <td>REST, gRPC</td>
+            </tr>
+        </table>
+    </div>
+    <div class="service">
+        <h2>Reporter</h2>
+        <p><a href="http://10.17.53.71/api/reporter/v1/docs">SwaggerUI</a></p>
+        <h3>Description</h3>
+        <p>All related stuffs around stix objects statistics and dashboard APIs is implemented here.</p>
+        <table>
+            <caption>Stack Technology</caption>
+            <tr>
+                <th scope="col">StackLevel</th>
+                <th scope="col">Technology/Type</th>
+            </tr>
+            <tr>
+                <td>Programming Language</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>REST Framework</td>
+                <td>FastAPI</td>
+            </tr>
+            <tr>
+                <td>Documentation</td>
+                <td>OpenAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MongoDB</td>
+            </tr>
+            <tr>
+                <td>Endpoints</td>
+                <td>REST, gRPC</td>
+            </tr>
+        </table>
+    </div>
+    <div class="service">
+        <h2>Radar</h2>
+        <p><a href="http://10.17.53.71/api/radar/v1/docs">SwaggerUI</a></p>
+        <h3>Description</h3>
+        <p>All related stuffs around Iodef v1.0</p>
+        <table>
+            <caption>Stack Technology</caption>
+            <tr>
+                <th scope="col">StackLevel</th>
+                <th scope="col">Technology/Type</th>
+            </tr>
+            <tr>
+                <td>Programming Language</td>
+                <td>Golang</td>
+            </tr>
+            <tr>
+                <td>REST Framework</td>
+                <td>Flex</td>
+            </tr>
+            <tr>
+                <td>Documentation</td>
+                <td>OpenAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MongoDB</td>
+            </tr>
+            <tr>
+                <td>Endpoints</td>
+                <td>REST, gRPC</td>
+            </tr>
+        </table>
+    </div>
+    <div class="service">
+        <h2>TAXII</h2>
+        <h3>Description</h3>
+        <p>All related stuffs around parsing, validating, storing and propagating fin-stix objects besides a TAXII
+            protocol implementation and duplication-versioning automated controls.</p>
+        <p><a href="http://10.17.53.71/api/taxii/v1/docs">SwaggerUI</a></p>
+        <table>
+            <caption>Stack Technology</caption>
+            <tr>
+                <th scope="col">StackLevel</th>
+                <th scope="col">Technology/Type</th>
+            </tr>
+            <tr>
+                <td>Programming Language</td>
+                <td>Golang</td>
+            </tr>
+            <tr>
+                <td>REST Framework</td>
+                <td>Flex</td>
+            </tr>
+            <tr>
+                <td>Documentation</td>
+                <td>OpenAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MongoDB</td>
+            </tr>
+            <tr>
+                <td>DRM</td>
+                <td>MongoDB Official Driver</td>
+            </tr>
+            <tr>
+                <td>Endpoints</td>
+                <td>REST, gRPC, MessageBroker</td>
+            </tr>
+            <tr>
+                <td>MessageBroker</td>
+                <td>RabbitMQ</td>
+            </tr>
+        </table>
+    </div>
+    <div class="service">
+        <h2>GraphAnalysis</h2>
+        <h3>Description</h3>
+        <p>Graph Analysing and Fin-Stix enrichment with statistical information provider</p>
+        <p><a href="http://10.17.53.71/api/taxii/v1/docs">SwaggerUI</a></p>
+        <table>
+            <caption>Stack Technology</caption>
+            <tr>
+                <th scope="col">StackLevel</th>
+                <th scope="col">Technology/Type</th>
+            </tr>
+            <tr>
+                <td>Programming Language</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>REST Framework</td>
+                <td>FastAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>Neo4j</td>
+            </tr>
+            <tr>
+                <td>Endpoints</td>
+                <td>REST, gRPC, MessageBroker</td>
+            </tr>
+            <tr>
+                <td>MessageBroker</td>
+                <td>RabbitMQ</td>
+            </tr>
+        </table>
+    </div>
+    <div class="service">
+        <h2>Configuration</h2>
+        <h3>Description</h3>
+        <p>This service can be used to observe and change microservices configurations dynamically</p>
+        <p><a href="http://10.17.53.71/api/config/v1/docs">SwaggerUI</a></p>
+        <table>
+            <caption>Stack Technology</caption>
+            <tr>
+                <th scope="col">StackLevel</th>
+                <th scope="col">Technology/Type</th>
+            </tr>
+            <tr>
+                <td>Programming Language</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>REST Framework</td>
+                <td>FastAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MongoDB</td>
+            </tr>
+            <tr>
+                <td>Endpoints</td>
+                <td>REST</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
